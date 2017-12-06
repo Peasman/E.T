@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="detailView_main_pane" hbarPolicy="NEVER"
+	maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefWidth="332.0" type="ScrollPane"
+	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+	<content>
+		<AnchorPane minWidth="307.0" prefWidth="307.0">
+			<children>
+				<VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="-4.0"
+					prefWidth="293.0">
+					<children>
+						<VBox alignment="CENTER">
+							<children>
+								<AnchorPane>
+									<children>
+										<HBox alignment="TOP_RIGHT" AnchorPane.leftAnchor="0.0">
+											<children>
+												<Button fx:id="detailView_Backward" mnemonicParsing="false"
+													onAction="#detailView_navBackOnAction" text="&lt;" />
+												<Button fx:id="detailView_Forward" mnemonicParsing="false"
+													onAction="#detailView_navForOnAction" text="&gt;">
+													<HBox.margin>
+														<Insets right="150.0" />
+													</HBox.margin>
+												</Button>
+											</children>
+										</HBox>
+										<HBox AnchorPane.rightAnchor="0.0">
+											<children>
+												<Button fx:id="detailView_Duplicate" maxHeight="50.0"
+													maxWidth="50.0" minHeight="0.0" minWidth="0.0"
+													mnemonicParsing="false" onAction="#detailView_duplicateOnAction"
+													prefHeight="25.0" prefWidth="25.0">
+													<graphic>
+														<ImageView fitHeight="128.0" fitWidth="128.0"
+															pickOnBounds="true" preserveRatio="true" scaleX="0.15"
+															scaleY="0.15">
+															<image>
+																<Image
+																	url="@/icons/detailview/duplicate.png" />
+															</image>
+														</ImageView>
+													</graphic>
+												</Button>
+												<Button fx:id="detailView_Delete" alignment="CENTER_RIGHT"
+													maxHeight="50.0" maxWidth="50.0" minHeight="0.0" minWidth="0.0"
+													mnemonicParsing="false" onAction="#detailView_deleteOnAction"
+													prefHeight="25.0" prefWidth="25.0">
+													<HBox.margin>
+														<Insets left="1.0" right="1.0" />
+													</HBox.margin>
+													<graphic>
+														<ImageView fitHeight="128.0" fitWidth="128.0"
+															pickOnBounds="true" preserveRatio="true" scaleX="0.15"
+															scaleY="0.15" translateX="60.0">
+															<image>
+																<Image
+																	url="@/icons/detailview/delete.png" />
+															</image>
+														</ImageView>
+													</graphic>
+												</Button>
+												<Button fx:id="detailView_Modify" alignment="CENTER_RIGHT"
+													maxHeight="50.0" maxWidth="50.0" minHeight="0.0" minWidth="0.0"
+													mnemonicParsing="false" onAction="#detailView_modifyOnAction"
+													prefHeight="25.0" prefWidth="25.0">
+													<graphic>
+														<ImageView fitHeight="128.0" fitWidth="128.0"
+															pickOnBounds="true" preserveRatio="true" scaleX="0.13"
+															scaleY="0.13" translateX="60.0">
+															<image>
+																<Image url="@/icons/detailview/edit.png" />
+															</image>
+														</ImageView>
+													</graphic>
+												</Button>
+											</children>
+										</HBox>
+									</children>
+								</AnchorPane>
+								<AnchorPane>
+									<children>
+										<Label fx:id="detailView_Name" contentDisplay="CENTER"
+											text="Name" underline="true" AnchorPane.leftAnchor="0.0">
+											<font>
+												<Font size="19.0" />
+											</font>
+										</Label>
+										<Button fx:id="detailView_Change" layoutX="268.0"
+											maxHeight="50.0" maxWidth="50.0" minHeight="0.0" minWidth="0.0"
+											mnemonicParsing="false" onAction="#detailView_changeOnAction"
+											prefHeight="25.0" prefWidth="25.0" AnchorPane.rightAnchor="0.0">
+											<graphic>
+												<ImageView fitHeight="128.0" fitWidth="128.0"
+													pickOnBounds="true" preserveRatio="true" scaleX="0.13"
+													scaleY="0.13">
+													<image>
+														<Image url="@/icons/detailview/edit.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</Button>
+									</children>
+								</AnchorPane>
+							</children>
+							<VBox.margin>
+								<Insets top="5.0" />
+							</VBox.margin>
+						</VBox>
+						<AnchorPane minWidth="300.0" prefWidth="300.0">
+							<children>
+								<Label prefHeight="19.0" prefWidth="103.0" text="Datum"
+									AnchorPane.leftAnchor="0.0">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<DatePicker fx:id="detailView_Date" disable="true"
+									prefHeight="28.0" prefWidth="200.0"
+									style="-fx-border-color: grey; -fx-background-color: white;"
+									AnchorPane.rightAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane minWidth="300.0" prefWidth="300.0">
+							<children>
+								<Label prefHeight="19.0" prefWidth="107.0" text="Zeit"
+									AnchorPane.leftAnchor="0.0">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<ChoiceBox fx:id="detailView_Time_h" layoutX="100.0"
+									layoutY="-3.0" prefHeight="26.0" prefWidth="60.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0"
+									AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="0.0" />
+								<ChoiceBox fx:id="detailView_Time_m" layoutX="170.0"
+									prefHeight="26.0" prefWidth="60.0" />
+								<Label layoutX="162.0" layoutY="3.0" prefHeight="19.0"
+									prefWidth="12.0" text=":">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+							</children>
+							<VBox.margin>
+								<Insets top="5.0" />
+							</VBox.margin>
+						</AnchorPane>
+						<AnchorPane minWidth="300.0" prefWidth="300.0">
+							<children>
+								<Label prefHeight="19.0" prefWidth="108.0" text="Menge"
+									AnchorPane.leftAnchor="0.0">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<HBox alignment="CENTER" AnchorPane.rightAnchor="0.0">
+									<children>
+										<TextField fx:id="detailView_Amount" editable="false"
+											minWidth="-Infinity" prefHeight="26.0" prefWidth="147.0">
+											<HBox.margin>
+												<Insets right="3.0" />
+											</HBox.margin>
+										</TextField>
+										<ChoiceBox fx:id="detailView_Unit" maxHeight="26.0"
+											maxWidth="50.0" prefHeight="26.0" prefWidth="50.0" />
+									</children>
+								</HBox>
+							</children>
+							<VBox.margin>
+								<Insets top="5.0" />
+							</VBox.margin>
+						</AnchorPane>
+						<VBox fx:id="detailView_IngredientBox">
+							<children>
+								<HBox alignment="CENTER_LEFT">
+									<children>
+										<Label prefHeight="19.0" prefWidth="263.0" text="Zutaten">
+											<font>
+												<Font size="15.0" />
+											</font>
+										</Label>
+									</children>
+									<VBox.margin>
+										<Insets bottom="2.0" top="2.0" />
+									</VBox.margin>
+								</HBox>
+								<ListView fx:id="detailView_Foods" prefHeight="200.0"
+									prefWidth="200.0" />
+								<VBox>
+									<children>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Inhaltsstoffe">
+											<font>
+												<Font size="15.0" />
+											</font>
+											<VBox.margin>
+												<Insets bottom="3.0" top="3.0" />
+											</VBox.margin>
+										</Label>
+										<ListView fx:id="detailView_Ingredients" prefHeight="200.0"
+											prefWidth="200.0" />
+									</children>
+									<VBox.margin>
+										<Insets bottom="3.0" top="3.0" />
+									</VBox.margin>
+								</VBox>
+							</children>
+							<VBox.margin>
+								<Insets bottom="3.0" top="3.0" />
+							</VBox.margin>
+						</VBox>
+						<VBox>
+							<children>
+								<Label text="Mögliche Beschwerden">
+									<font>
+										<Font size="15.0" />
+									</font>
+									<VBox.margin>
+										<Insets bottom="3.0" />
+									</VBox.margin>
+								</Label>
+								<ListView fx:id="detailView_Problems" prefHeight="200.0"
+									prefWidth="200.0" />
+							</children>
+							<VBox.margin>
+								<Insets bottom="3.0" top="3.0" />
+							</VBox.margin>
+						</VBox>
+						<VBox prefHeight="200.0" prefWidth="100.0">
+							<children>
+								<Label prefHeight="19.0" prefWidth="102.0" text="Kommentar">
+									<font>
+										<Font size="15.0" />
+									</font>
+									<VBox.margin>
+										<Insets bottom="3.0" />
+									</VBox.margin>
+								</Label>
+								<TextArea fx:id="detailView_Comment" prefHeight="200.0"
+									prefWidth="200.0" />
+							</children>
+							<VBox.margin>
+								<Insets bottom="3.0" top="3.0" />
+							</VBox.margin>
+						</VBox>
+						<AnchorPane>
+							<children>
+								<Button fx:id="detailView_save" mnemonicParsing="false"
+									onAction="#detailView_saveOnAction" text="Speichern"
+									AnchorPane.rightAnchor="0.0" />
+								<Button fx:id="detailView_cancel" mnemonicParsing="false"
+									onAction="#detailView_cancelOnAction" text="Abbrechen"
+									AnchorPane.rightAnchor="85.0" />
+							</children>
+						</AnchorPane>
+					</children>
+				</VBox>
+			</children>
+		</AnchorPane>
+	</content>
+</fx:root>

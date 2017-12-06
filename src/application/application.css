@@ -1,0 +1,11 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+		
+/* For date-picker */
+.date-picker:disabled {
+     -fx-opacity: 1.0;
+}
+
+/* For date-picker textfield */
+.date-picker > .date-picker-display-node:disabled {
+    -fx-opacity: 1.0;
+}

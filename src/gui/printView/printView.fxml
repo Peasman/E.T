@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root fx:id="printView_root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1403.0" prefWidth="992.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="printView_label" alignment="CENTER" prefHeight="23.0" text="Ernährungstagebuch" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="printView_table" layoutY="22.0" prefHeight="1381.0" prefWidth="992.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0">
+        <columns>
+            <TableColumn fx:id="printView_table_date" prefWidth="91.0" text="Datum" />
+          <TableColumn fx:id="printView_table_time" prefWidth="96.0" text="Zeit" />
+          <TableColumn fx:id="printView_table_amount" prefWidth="131.0" text="Menge" />
+            <TableColumn fx:id="printView_table_name" minWidth="0.0" prefWidth="241.0" text="Name" />
+            <TableColumn fx:id="printView_table_comment" minWidth="0.0" prefWidth="432.0" text="Kommentar" />
+        </columns>
+      </TableView>
+   </children>
+</fx:root>

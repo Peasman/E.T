@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="mainView" dividerPositions="0.03" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" type="SplitPane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane maxWidth="44.0" minHeight="0.0" minWidth="44.0" prefHeight="160.0" prefWidth="44.0" SplitPane.resizableWithParent="false">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="44.0" minWidth="38.0" prefHeight="578.0" prefWidth="44.0" spacing="5.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="mainView_newDiary" alignment="TOP_CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#newDiary_onAction">
+                     <tooltip>
+                        <Tooltip text="neues Tagebuch" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_newDiary_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/new_diary_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="mainView_loadDiary" alignment="TOP_CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#loadDiary_onAction">
+                     <tooltip>
+                        <Tooltip text="Tagebuch Laden" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_loadDiary_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/open_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="mainView_saveDiary" alignment="TOP_CENTER" contentDisplay="CENTER" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#saveDiary_onAction">
+                     <tooltip>
+                        <Tooltip text="Tagebuch speichern" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_saveDiary_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                           <image>
+                              <Image url="@/icons/save_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="mainView_saveDiaryAs" alignment="TOP_CENTER" contentDisplay="CENTER" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#saveDiaryAs_onAction">
+                     <tooltip>
+                        <Tooltip text="Tagebuch speichern unter..." />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_saveDiaryAs_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/save_as_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="mainView_compareDiary" alignment="TOP_CENTER" contentDisplay="CENTER" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#compareDiary_onAction">
+                     <tooltip>
+                        <Tooltip text="Tagebücher vergleichen" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_compareDiary_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/compare_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="mainView_printDiary" alignment="TOP_CENTER" contentDisplay="CENTER" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#printDiary_onAction">
+                     <tooltip>
+                        <Tooltip text="Tagebuch drucken" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_printDiary_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/print_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <MenuButton fx:id="mainView_addEntry" mnemonicParsing="false" popupSide="RIGHT">
+                     <items>
+                        <MenuItem fx:id="mainView_addEntry_food" mnemonicParsing="false" onAction="#myEntries_foodList_onAction" text="Mahlzeit">
+                           <graphic>
+                              <ImageView fx:id="mainView_addEntry_food_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/icons/food_icon.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mainView_addEntry_drug" mnemonicParsing="false" onAction="#myEntries_drugList_onAction" text="Medikament">
+                           <graphic>
+                              <ImageView fx:id="mainView_addEntry_drug_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/icons/drugs_icon_syringe.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mainView_addEntry_healthProblem" mnemonicParsing="false" onAction="#myEntries_healthProblemList_onAction" text="Beschwerde">
+                           <graphic>
+                              <ImageView fx:id="mainView_addEntry_healthProblem_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/icons/health_problem_icon.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mainView_addEntry_factor" mnemonicParsing="false" onAction="#myEntries_FactorList_onAction" text="Sonstiger Faktor">
+                           <graphic>
+                              <ImageView fx:id="mainView_addEntry_factor_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/icons/exclamation.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <tooltip>
+                        <Tooltip text="Neuen Eintrag erstellen" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_addEntry_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/add_entry_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <MenuButton fx:id="mainView_myLists" mnemonicParsing="false" popupSide="RIGHT">
+                    <items>
+                      <MenuItem fx:id="mainView_myLists_food" mnemonicParsing="false" onAction="#myLists_foodList_onAction" text="Lebensmittel">
+                           <graphic>
+                              <ImageView fx:id="mainView_myLists_food_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/icons/food_liste_icon.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                      <MenuItem fx:id="mainView_myLists_drugs" mnemonicParsing="false" onAction="#myLists_drugList_onAction" text="Medikamente">
+                           <graphic>
+                              <ImageView fx:id="mainView_myLists_drugs_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/icons/medicine_liste_icon.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mainView_myLists_ingridients" mnemonicParsing="false" onAction="#myLists_ingredientList_onAction" text="Inhaltsstoffe">
+                           <graphic>
+                              <ImageView fx:id="mainView_myLists_ingridients_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                                 <viewport>
+                                    <Rectangle2D height="128.0" width="128.0" />
+                                 </viewport>
+                                 <image>
+                                    <Image url="@/icons/ingredient_liste_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fx:id="mainView_myLists_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/listen_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Meine Listen" />
+                     </tooltip>
+                  </MenuButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="611.0" maxWidth="44.0" minWidth="38.0" prefHeight="107.0" prefWidth="44.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="611.0">
+               <padding>
+                  <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+               </padding>
+               <children>
+                  <Button fx:id="mainView_help" alignment="BOTTOM_CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#help_onAction">
+                     <tooltip>
+                        <Tooltip text="Hilfe" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="mainView_help_icon" fitHeight="32.0" fitWidth="32.0" preserveRatio="true">
+                           <image>
+                              <Image url="@/icons/help_icon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="128.0" width="128.0" />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <SplitPane dividerPositions="0.333, 0.666" prefHeight="718.0" prefWidth="1226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                  <AnchorPane fx:id="mainView_LeftWindow" minWidth="442.0" />
+                  <AnchorPane minWidth="442.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="396.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ToggleButton fx:id="mainView_toggleCollapseLeft" alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toggleCollapseLeft_onAction" text="&lt;" textAlignment="JUSTIFY" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </ToggleButton>
+                              <ToggleButton fx:id="mainView_toggleCollapseRight" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toggleCollapseRight_onAction" text="&gt;" textAlignment="JUSTIFY" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </ToggleButton>
+                              <Label fx:id="labelDate" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="mainView_MiddleWindow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="mainView_RightWindow" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" />
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+  </items>
+</fx:root>

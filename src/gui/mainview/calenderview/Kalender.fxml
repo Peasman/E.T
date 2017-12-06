@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="100.0" layoutY="61.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Woche">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="100.0" layoutY="63.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="373.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="27.0" minWidth="10.0" prefWidth="27.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButMon" layoutX="183.0" layoutY="34.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButMonGo" text="Montag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButTue" layoutX="155.0" layoutY="21.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButTueGo" text="Dienstag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButWed" layoutX="177.0" layoutY="28.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButWedGo" text="Mittwoch" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButThu" layoutX="169.0" layoutY="28.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButThuGo" text="Donnerstag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButFri" layoutX="154.0" layoutY="41.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButFriGo" text="Freitag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButSat" layoutX="169.0" layoutY="28.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButSatGo" text="Samstag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <children>
+                                    <Button fx:id="calenderViewWeek_ButSun" layoutX="169.0" layoutY="28.0" mnemonicParsing="false" onAction="#calenderViewWeek_ButSunGo" text="Sonntag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd1" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd1" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd1" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd2" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd2" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd2" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd3" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd3" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd3" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd4" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd4" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd4" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd5" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd5" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd5" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd6" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd6" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd6" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane maxWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle fx:id="calenderViewWeek_FoodInd7" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" />
+                                    <Rectangle fx:id="calenderViewWeek_MedInd7" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="calenderViewWeek_ProbInd7" arcHeight="5.0" arcWidth="5.0" fill="RED" height="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="27.0" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Monat">
+            <content>
+              <AnchorPane fx:id="calenderView_monthAnchor">
+                     <children>
+                        <GridPane fx:id="calenderView_grid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <DatePicker fx:id="calenderView_DatePicker" layoutY="3.0" onAction="#calenderView_DatePickerGo" prefHeight="24.0" prefWidth="146.0" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="5.0" />
+   </children>
+</fx:root>

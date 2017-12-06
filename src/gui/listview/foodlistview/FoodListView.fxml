@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="800.0" prefWidth="1080.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.3562152133580705" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="153.0">
+               <children>
+                  <ButtonBar layoutX="4.0" layoutY="10.0" nodeOrientation="RIGHT_TO_LEFT">
+                     <buttons>
+                        <Button fx:id="ingredientListView_export" mnemonicParsing="false" onAction="#export_onAction" prefHeight="64.0" prefWidth="64.0">
+                           <tooltip>
+                              <Tooltip text="export" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0">
+                                 <image>
+                                    <Image url="@/icons/save_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="ingredientListView_import" mnemonicParsing="false" onAction="#import_onAction" prefHeight="64.0" prefWidth="64.0">
+                           <tooltip>
+                              <Tooltip text="import" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0">
+                                 <image>
+                                    <Image url="@/icons/open_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="ingredientListView_delete" mnemonicParsing="false" onAction="#delete_onAction" prefHeight="64.0" prefWidth="64.0">
+                           <tooltip>
+                              <Tooltip text="löschen" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0">
+                                 <image>
+                                    <Image url="@/icons/list_delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="ingredientListView_newIngredient" mnemonicParsing="false" onAction="#new_onAction" prefHeight="64.0" prefWidth="64.0">
+                           <tooltip>
+                              <Tooltip text="hinzufügen" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0">
+                                 <image>
+                                    <Image url="@/icons/list_add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </buttons>
+                  </ButtonBar>
+                  <AnchorPane layoutX="227.0" layoutY="472.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="94.0">
+                     <children>
+                        <ListView fx:id="foodListView_foodList" layoutX="46.0" layoutY="83.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <AnchorPane fx:id="foodListView_topAnchor" layoutX="28.0" layoutY="14.0" maxHeight="94.0" prefHeight="94.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="foodListView_name" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="573.0" text="Name" textAlignment="CENTER" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="7.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="94.0">
+                     <children>
+                        <Accordion fx:id="ingredientListView_accordionList" layoutX="14.0" layoutY="47.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+                           <panes>
+                              <TitledPane animated="false" text="Zutaten">
+                                 <content>
+                                  <AnchorPane>
+                                       <children>
+                                          <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ImageView fx:id="foodListView_image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <HBox>
+                                                   <children>
+                                                      <Button fx:id="foodListView_addImage" mnemonicParsing="false" onAction="#addImage_onAction" prefHeight="16.0" prefWidth="16.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Bild hinzufügen" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0">
+                                                               <image>
+                                                                  <Image url="@/icons/list_add.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="foodListView_deleteImage" mnemonicParsing="false" onAction="#deleteImage_OnAction" prefHeight="16.0" prefWidth="16.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Bild löschen" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0">
+                                                               <image>
+                                                                  <Image url="@/icons/list_delete.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <ListView fx:id="foodListView_innerFoods" prefHeight="261.0" prefWidth="648.0" />
+                                                <HBox>
+                                                   <children>
+                                                      <Button fx:id="foodListView_addInnerFood" mnemonicParsing="false" onAction="#addInnerFood_onAction" prefHeight="16.0" prefWidth="16.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Zutat hinzufügen" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0">
+                                                               <image>
+                                                                  <Image url="@/icons/list_add.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="foodListView_deleteInnerFood" mnemonicParsing="false" onAction="#deleteInnerFood_onAction" prefHeight="16.0" prefWidth="16.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Zutat löschen" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0">
+                                                               <image>
+                                                                  <Image url="@/icons/list_delete.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Inhaltsstoffe">
+                                 <content>
+                                    <AnchorPane>
+                                       <children>
+                                          <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox />
+                                                <ListView fx:id="foodListView_ingredients" prefHeight="261.0" prefWidth="648.0" />
+                                                <HBox>
+                                                   <children>
+                                                      <Button fx:id="foodListView_addInnerIngredient" mnemonicParsing="false" onAction="#addInnerIngredient_onAction" prefHeight="16.0" prefWidth="16.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Zutat hinzufügen" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0">
+                                                               <image>
+                                                                  <Image url="@/icons/list_add.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="foodListView_deleteInnerIngredient" mnemonicParsing="false" onAction="#deleteInnerIngredient_onAction" prefHeight="16.0" prefWidth="16.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Zutat löschen" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0">
+                                                               <image>
+                                                                  <Image url="@/icons/list_delete.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="mögliche Beschwerden">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView fx:id="foodListView_healthProblems" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                           </panes></Accordion>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</fx:root>
